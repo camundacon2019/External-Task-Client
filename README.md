@@ -1,5 +1,16 @@
-# External-Task-Client
+# Camunda Python Module
 
-Here you will find the cam. Python Module that implements the main REST calls you need to make in order to define an external task client for Camunda. 
+This Python module implements the main methods to communicate with the Camunda Engine.
 
-![](sailing.png)
+You can import it in order to built your own client. 
+
+
+
+
+
+
+
+
+
+
+
