@@ -1,6 +1,6 @@
 # Camunda External Taks Client Python
 
-##Features 
+## Features 
 This python module features the following: 
 -Extend the lock duration of External Tasks
 -Unlock External Tasks
@@ -9,19 +9,21 @@ This python module features the following:
 
 
 
-##Installing
+## Installing
 
 
 
 
 
-##Usage
+## Usage
 1. Make sure you have [Camunda](https://camunda.com/download/) running.
 2. Create a simple bpmn process model with an [External Service Task](https://docs.camunda.org/manual/latest/user-guide/ext-client/) and define the topic as 'topicName'.
 3. Deploy the process to the Camunda BPM engine.
 4. In your Python code:
 
+
 ´´´
+
 import cam
 
 camundaTask = cam.client(url = "http://localhost:8080/engine-rest" ) #to connect your external Task client with Camunda, define the REST endpoint of the Camunda Engine, addionally you can provide the lockduration and longPolling as arguments. If not provided those will be set to a default value
@@ -40,10 +42,7 @@ variables =	{
 
 camundaTask.complete(**variables)
 
-
-
-
-´´
+´´´
 
 
 
