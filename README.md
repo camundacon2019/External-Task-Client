@@ -25,9 +25,11 @@ This python module features the following:
 ```python
 import cam
 
-camundaTask = cam.client(url = "http://localhost:8080/engine-rest" ) #to connect your external Task client with Camunda, define the REST endpoint of the Camunda Engine, addionally you can provide the lockduration and longPolling as arguments. If not provided those will be set to a default value
+camundaTask = cam.client(url = "http://localhost:8080/engine-rest" ) 
+"""to connect your external Task client with Camunda, define the REST endpoint of the Camunda Engine, addionally you can provide the lockduration and longPolling as arguments. If not provided those will be set to a default value"""
 
-camundaTask.subscribe(topic = "topicName") # addionally you can provide the workerId as argument. If not provided those will be set to a default value
+camundaTask.subscribe(topic = "topicName") 
+"""addionally you can provide the workerId as argument. If not provided those will be set to a default value"""
 
 #add your business logic here
 
