@@ -22,8 +22,7 @@ This python module features the following:
 4. In your Python code:
 
 
-´´´
-
+```python
 import cam
 
 camundaTask = cam.client(url = "http://localhost:8080/engine-rest" ) #to connect your external Task client with Camunda, define the REST endpoint of the Camunda Engine, addionally you can provide the lockduration and longPolling as arguments. If not provided those will be set to a default value
@@ -41,8 +40,7 @@ variables =	{
 }
 
 camundaTask.complete(**variables)
-
-´´´
+```
 
 
 
