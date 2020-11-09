@@ -43,26 +43,26 @@ This python module features the following:
 -Report BPMN errors and failures
 -Share variables with the Workflow Engine
 
-###[Fetch and Lock](https://docs.camunda.org/manual/latest/reference/rest/external-task/fetch/)
+### [Fetch and Lock](https://docs.camunda.org/manual/latest/reference/rest/external-task/fetch/)
 - Polling tasks from the engine works by performing fetch & lock operation of tasks that have a subscription. 
 - If the funcion subscribe from the external task client is used, it will try to fetch and lock task for the registered topic. 
 If no task is available the external task client is polling periodically.
 ```python
-"""
 # susbscribe to the topic: 'topicName'
 camundaTask.subscribe(topic = "topicName")
 Optional arguments:
 - 'lockDuration': defines the time the task is locked for the client. Default value: 1000
 - 'longPolling' : defines the time a request is suspended if no task is available. Default value: 5000
-"""
 ```
 
-###[Complete](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-complete/)
+### [Complete](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-complete/)
 
 ```python
 # susbscribe to the topic: 'topicName'
 camundaTask.subscribe(topic = "topicName")
+
 #Put your business logic for the task here
+
 #Create some variables
 variables =	{
   "aVariable": "IAmAString",
@@ -74,13 +74,15 @@ camundaTask.complete(**variables)
 
 ```
 
-###[Handle Failure](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-failure/)
+### [Handle Failure](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-failure/)
 
 
 ```python
 #Subscribe to the topic 'topicName'
 camundaTask.subscribe(topic = "topicName") 
+
 #Put your business logic for the task here
+
 #Handle a Failure
 camundaTask.fail(error_message = "some failure message", retries = 0, retryTimeout = 2000)
 """
@@ -90,12 +92,14 @@ Optional arguments:
 """
 ```
 
-###[Handle BPMN Error](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-bpmn-error/)
+### [Handle BPMN Error](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-bpmn-error/)
 
 ```python
 #Subscribe to the topic 'topicName'
 camundaTask.subscribe(topic = "topicName")
+
 #Put your business logic for the task here
+
 #Create some Variables
 variables =	{
   "aVariable": "IAmAString",
@@ -112,11 +116,13 @@ Optional arguments:
 """
 ```
 
-###[Extend duration](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-extend-lock/)
+### [Extend duration](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-extend-lock/)
 ```python
 #Subscribe to the topic 'topicName'
 camundaTask.subscribe(topic = "topicName")
+
 #Put your business logic for the task here
+
 #Extend the lock time
 camundaTask.new_lockduration(new_duration ="6000")
 ```
