@@ -3,7 +3,7 @@ Implement your [BPMN Service Task](https://docs.camunda.org/manual/latest/user-g
 The module cam.py is written in Python3. To use the module Python 3.7 is requiered. 
 This python module was used for the [tutorial](https://www.youtube.com/watch?v=XNZDEw33udU) about external task clients at Camundacon 2019. 
 
-*Note*: This is a sample and not supported in any way. 
+*Note: This module is a sample and not supported in any way.* 
 
 
 ## Installing
