@@ -50,9 +50,11 @@ If no task is available the external task client is polling periodically.
 ```python
 # susbscribe to the topic: 'topicName'
 camundaTask.subscribe(topic = "topicName")
+"""
 Optional arguments:
 - 'lockDuration': defines the time the task is locked for the client. Default value: 1000
 - 'longPolling' : defines the time a request is suspended if no task is available. Default value: 5000
+"""
 ```
 
 ### [Complete](https://docs.camunda.org/manual/latest/reference/rest/external-task/post-complete/)
